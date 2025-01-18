@@ -1,0 +1,62 @@
+inherited MenuExplorer: TMenuExplorer
+  inherited pnBack: TPanel
+    object shList: TShellListView[0]
+      Left = 173
+      Height = 309
+      Top = 36
+      Width = 427
+      Align = alClient
+      Color = clDefault
+      TabOrder = 0
+      ObjectTypes = [otNonFolders]
+      ShellTreeView = shTree
+    end
+    object shTree: TShellTreeView[1]
+      Left = 0
+      Height = 309
+      Top = 36
+      Width = 168
+      Align = alLeft
+      Constraints.MinWidth = 120
+      FileSortType = fstNone
+      TabOrder = 1
+      ObjectTypes = [otFolders]
+      ShellListView = shList
+    end
+    object shPath: TComboBox[2]
+      Left = 0
+      Height = 36
+      Top = 0
+      Width = 600
+      Align = alTop
+      ItemHeight = 0
+      TabOrder = 2
+      Text = '/'
+    end
+    object spTree: TSplitter[3]
+      Left = 168
+      Height = 309
+      Top = 36
+      Width = 5
+    end
+    object sbFooter: TSplitter[4]
+      Cursor = crVSplit
+      Left = 0
+      Height = 5
+      Top = 345
+      Width = 600
+      Align = alBottom
+      ParentColor = False
+      ResizeAnchor = akBottom
+    end
+    object pnFooter: TPanel[5]
+      Left = 0
+      Height = 50
+      Top = 350
+      Width = 600
+      Align = alBottom
+      Constraints.MinHeight = 40
+      TabOrder = 5
+    end
+  end
+end
